@@ -1,0 +1,299 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e8dfff, #d4bfff); /* Light gradient background */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.hallAvailability {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #000;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  width: 80%;
+  max-width: 1600px;
+  left: 10%;
+  top: 0px;
+  position: relative;
+  height: 680px;
+  max-height: 100vh; /* Ensure it fits within the viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* Header Styles */
+.hallAvailability .header {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.hallAvailability .logo {
+  height: 70px;
+  position: relative;
+  left: -35px;
+  margin-bottom: 10px;
+  display: inline-block;
+  top: 0;
+}
+
+.hallAvailability .bit-text {
+  position: absolute;
+  top: 21%; /* Vertically center the BIT text */
+  left: calc(50% + 5px); /* Place BIT near the logo */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+  font-size: 35px;
+  font-weight: bold;
+  color: #4a148c;
+}
+
+.hallAvailability .title {
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #4a148c;
+  position: relative;
+  top: -20px;
+}
+
+.hallAvailability .date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  top: -15px;
+}
+
+.hallAvailability .date-picker input {
+  padding: 8px 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  width: 260px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  position: relative;
+  top: -8px;
+}
+
+.hallAvailability .date-picker input:focus {
+  outline: none;
+  border: 1px solid #4a148c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hallAvailability .availability-table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+  top: -10px;
+  max-height: 400px; /* Restrict table height on small screens */
+}
+
+.hallAvailability .availability-table th {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #ddd; /* Outline for columns */
+}
+
+.hallAvailability .availability-table td {
+  max-width: 100%;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  border: 2px solid #ddd; /* Outline for table cells */
+}
+
+.hallAvailability .hall-name {
+  font-weight: bold;
+  text-align: left;
+  font-size: 15px;
+  color: #333;
+  width: 180px;
+}
+
+.hallAvailability .slot-container {
+  display: flex;
+  flex-wrap: wrap; /* Prevent wrapping */
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.hallAvailability .slot {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+.hallAvailability .slot.green {
+  background-color: #4caf50;
+  box-shadow: 0 2px 6px rgba(0, 128, 0, 0.2);
+}
+
+.hallAvailability .slot.red {
+  background-color: #f44336;
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.2);
+}
+
+.hallAvailability .slot:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Separator Row */
+.hallAvailability .separator td {
+  border-top: 2px solid #ddd;
+}
+
+.hallAvailability::-webkit-scrollbar {
+  width: 8px;
+}
+
+.hallAvailability::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.hallAvailability::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Responsive Design for Small Screens (Max Width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .hallAvailability {
+    width: 90%; /* Reduce width */
+    left: 5%; /* Center it */
+    margin-bottom: -30px;
+  }
+
+  .hallAvailability .title {
+    font-size: 24px; /* Adjust font size */
+  }
+
+  .hallAvailability .date-picker input {
+    width: 220px; /* Adjust input field width */
+  }
+
+  .hallAvailability .availability-table th {
+    font-size: 14px; /* Smaller font for table header */
+  }
+
+  .hallAvailability .availability-table td {
+    font-size: 12px; /* Smaller font for table cells */
+  }
+
+  .hallAvailability .slot {
+    font-size: 12px; /* Smaller font size for slots */
+    min-width: 80px; /* Reduce minimum width for slots */
+  }
+  .hallAvailability .logo {
+    height: 50px; /* Adjust logo size for better proportion */
+    top: 10px;
+    left: -25px; /* Fine-tune logo positioning */
+  }
+
+  .hallAvailability .bit-text {
+    font-size: 28px; /* Adjust font size to be smaller */
+    top: 35px;
+    left: calc(50% + 2px); /* Ensure BIT text is still aligned near the logo */
+    transform: translateY(-50%); /* Center BIT text vertically */
+  }
+}
+
+/* Responsive Design for Tablets (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+  .hallAvailability {
+    width: 95%; /* Further reduce width */
+    left: 2%; /* Center it */
+    padding: 15px; /* Reduce padding */
+    margin-bottom: -30px;
+  }
+
+  .hallAvailability .title {
+    font-size: 22px; /* Adjust font size for smaller screens */
+  }
+
+  .hallAvailability .date-picker input {
+    width: 200px; /* Smaller input field */
+  }
+
+  .hallAvailability .availability-table th {
+    font-size: 12px; /* Smaller font for table header */
+  }
+
+  .hallAvailability .availability-table td {
+    font-size: 11px; /* Smaller font for table cells */
+  }
+
+  .hallAvailability .slot {
+    font-size: 11px; /* Adjust slot font size */
+    min-width: 70px; /* Reduce slot size */
+  }
+  .hallAvailability .logo {
+    height: 40px; /* Smaller logo */
+    left: -20px; /* Adjust logo position */
+    top: 10px;
+  }
+
+  .hallAvailability .bit-text {
+    font-size: 22px; /* Smaller BIT text */
+    top: 30px;
+    left: calc(50% + 5px); /* Keep BIT text near logo */
+  }
+}
+
+/* Responsive Design for Mobile Screens (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+  .hallAvailability {
+    width: 100%; /* Full width on mobile */
+    left: 0; /* Remove left offset */
+    padding: 10px; /* Reduce padding */
+    margin-bottom: 10px;
+  }
+
+  .hallAvailability .title {
+    font-size: 20px; /* Smaller title font size */
+  }
+
+  .hallAvailability .date-picker input {
+    width: 180px; /* Smaller input field */
+  }
+
+  .hallAvailability .availability-table th {
+    font-size: 10px; /* Even smaller font for table header */
+  }
+
+  .hallAvailability .availability-table td {
+    font-size: 9px; /* Even smaller font for table cells */
+  }
+
+  .hallAvailability .slot {
+    font-size: 10px; /* Smaller font for slots */
+    min-width: 60px; /* Further reduce slot size */
+  }
+  .hallAvailability .logo {
+    height: 40px; /* Further reduce logo size */
+    left: 0; /* Center the logo */
+  }
+
+  .hallAvailability .bit-text {
+    font-size: 18px; /* Smaller BIT text */
+    left: 50%; /* Center BIT text */
+    transform: translateX(-50%); /* Fine-tune centering */
+  }
+}

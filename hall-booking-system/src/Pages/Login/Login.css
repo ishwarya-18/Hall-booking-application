@@ -1,0 +1,172 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;  /* This will prevent the page from scrolling */
+}
+
+.login-signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8dfff, #d4bfff); /* Light gradient background */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Form box styling */
+.form-box {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    border: 2px solid #000;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* Form Header */
+.form-header {
+    font-size: 26px;
+    font-weight: bold;
+    color: #4a148c;
+    margin-bottom: 20px;
+}
+
+/* Icon style */
+.icon {
+    margin-right: 8px;
+    color: #555;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 15px;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #4a148c;
+    transform: scale(1.05);
+}
+
+/* Input field styling */
+.form-group input {
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    top: -5px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #4a148c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Error message styling */
+.error-text {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* Toggle link styling */
+.toggle-link {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.toggle-link .toggle-action {
+    color: #4a148c;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.toggle-link .toggle-action:hover {
+    color: #6a1b9a;
+}
+
+/* Form layout */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    /* For tablets and smaller screens */
+    .form-box {
+        padding: 25px 30px; /* Reduce padding */
+        max-width: 400px; /* Ensure the form does not get too wide */
+    }
+
+    .form-header {
+        font-size: 22px; /* Reduce header font size */
+    }
+
+    .submit-btn {
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    .form-group input {
+        padding: 8px; /* Smaller input padding */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For very small screens like phones */
+    .form-box {
+        padding: 20px 25px; /* Further reduce padding */
+        max-width: 350px; /* Narrow form box */
+    }
+
+    .form-header {
+        font-size: 20px; /* Smaller header font */
+    }
+
+    .submit-btn {
+        padding: 10px 12px; /* Adjust button padding */
+        font-size: 14px; /* Smaller button font size */
+    }
+
+    .form-group input {
+        padding: 6px 8px; /* Further reduce input padding */
+        font-size: 14px; /* Adjust font size for input fields */
+    }
+
+    .toggle-link {
+        font-size: 0.8rem; /* Smaller font for toggle link */
+    }
+}

@@ -1,0 +1,188 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+/* General Styles */
+.feed-container {
+  font-family: "Arial", sans-serif;
+  position: fixed; /* Fixed positioning for the container */
+  bottom: 20px; /* Position 20px above the bottom of the screen */
+  right: 20px; /* Position 20px from the right edge of the screen */
+  z-index: 1000; /* Ensure it appears above other elements */
+  max-width: 100%; /* Prevent horizontal overflow */
+  overflow: hidden; /* Remove potential scrollbars */
+}
+
+/* Feedback Button */
+.enhanced-feedback-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #5c67f2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.enhanced-feedback-button:hover {
+  background-color: #3e49c9;
+}
+
+/* Feedback Modal Background */
+.enhanced-feedback-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.enhanced-feedback-modal-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px; /* Limit modal width */
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 0.3s ease-in-out;
+}
+
+/* Feedback Input */
+.enhanced-feedback-input {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+.enhanced-feedback-input:focus {
+  border-color: #5c67f2;
+  box-shadow: 0 0 5px rgba(92, 103, 242, 0.5);
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.enhanced-submit-button,
+.enhanced-cancel-button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Submit Button */
+.enhanced-submit-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.enhanced-submit-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cancel Button */
+.enhanced-cancel-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.enhanced-cancel-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .enhanced-feedback-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .enhanced-feedback-modal-content {
+    padding: 20px;
+  }
+
+  .enhanced-feedback-input {
+    font-size: 12px;
+    height: 80px;
+  }
+
+  .enhanced-submit-button,
+  .enhanced-cancel-button {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feed-container {
+    top: 20px;
+    max-width: 95%;
+  }
+
+  .enhanced-feedback-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .enhanced-feedback-modal-content {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .enhanced-feedback-input {
+    font-size: 12px;
+    height: 70px;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

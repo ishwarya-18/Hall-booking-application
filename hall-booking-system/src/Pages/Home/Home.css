@@ -1,0 +1,40 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e8dfff, #d4bfff); /* Light gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent page scrolling */
+}
+
+.home-container {
+    width: 80%;
+    max-width: 1600px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo-section {
+    text-align: center;
+}
+
+.bit-logo {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .bit-text {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+}

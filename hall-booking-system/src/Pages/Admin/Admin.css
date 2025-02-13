@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e8dfff, #d4bfff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Limit the max width */
+    box-sizing: border-box;
+}
+
+/* Admin Content Box */
+.admin-hall-booking {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 2px solid #000;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Header Styles */
+.admin-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4a148c;
+    text-align: center;
+    margin: 0;
+    text-decoration: underline;
+}
+
+/* Booking Table Container */
+.admin-booking-details {
+    margin-top: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+    width: 100%;
+}
+
+.admin-user-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.admin-user-table th,
+.admin-user-table td {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+}
+
+.admin-user-table th {
+    background-color: #6a1b9a;
+    color: white;
+    font-weight: bold;
+}
+
+.admin-delete {
+    background-color: #f44336;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.admin-delete:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive Design */
+
+/* For Medium Screens (1024px and below) */
+@media (max-width: 1024px) {
+    .admin-container {
+        padding: 15px;
+    }
+
+    .admin-title {
+        font-size: 24px;
+    }
+
+    .admin-hall-booking {
+        padding: 15px;
+    }
+
+    .admin-user-table th,
+    .admin-user-table td {
+        padding: 10px 12px;
+    }
+}
+
+/* For Small Screens (768px and below) */
+@media (max-width: 768px) {
+    .admin-container {
+        width: 100%; /* Ensure full width */
+    }
+
+    .admin-title {
+        font-size: 20px;
+    }
+
+    .admin-hall-booking {
+        padding: 10px;
+    }
+
+    .admin-user-table th,
+    .admin-user-table td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .admin-delete {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}
+
+/* For Very Small Screens (480px and below) */
+@media (max-width: 480px) {
+    .admin-title {
+        font-size: 18px;
+    }
+
+    .admin-hall-booking {
+        padding: 8px;
+    }
+
+    .admin-user-table th,
+    .admin-user-table td {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .admin-delete {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+}

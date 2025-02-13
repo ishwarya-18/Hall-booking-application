@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e8dfff, #d4bfff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.feedback-page {
+  width: 100%;
+  max-width: 1200px; /* Adjusted for better scaling */
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.feedback-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4a148c;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.feedback-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 600px;
+  box-sizing: border-box;
+}
+
+/* Table Styles */
+.feedback-table-container {
+  width: 100%;
+  overflow-x: auto; /* Horizontal scrolling for smaller devices */
+}
+
+.feedback-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 20px;
+  table-layout: auto; /* Dynamic column width */
+}
+
+.feedback-table th,
+.feedback-table td {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.feedback-table th {
+  background-color: #6a1b9a;
+  color: white;
+  font-weight: bold;
+}
+
+.feedback-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.feedback-table tr:hover {
+  background-color: #f1e1f1;
+}
+
+.feedback-table td {
+  word-break: break-word;
+  white-space: normal;
+}
+
+.no-feedback-message {
+  font-size: 16px;
+  color: #888;
+  padding: 20px;
+  font-style: italic;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (1024px and below) */
+@media (max-width: 1024px) {
+  .feedback-page {
+    padding: 25px;
+    margin-left: 40px;
+    width: 90%; /* Adjusted for medium screens */
+  }
+
+  .feedback-title {
+    font-size: 24px;
+  }
+
+  .feedback-container {
+    padding: 15px;
+  }
+
+  .feedback-table th,
+  .feedback-table td {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .feedback-page {
+    padding: 10px;
+    margin-left: 15px;
+    width: 95%; /* Full width with a slight margin */
+  }
+
+  .feedback-title {
+    font-size: 20px;
+  }
+
+  .feedback-container {
+    padding: 10px;
+  }
+
+  .feedback-table th,
+  .feedback-table td {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .feedback-page {
+    padding: 8px;
+    width: 100%; /* Full width for small devices */
+  }
+
+  .feedback-title {
+    font-size: 18px;
+  }
+
+  .feedback-container {
+    padding: 8px;
+  }
+
+  .feedback-table th,
+  .feedback-table td {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
